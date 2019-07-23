@@ -66,7 +66,7 @@ class Song
   end
   
   #Song.create_from_filename accepts a filename in format of '-.mp3'
-  #not only parses filename correctly, as in Song.new_from_filename, but also saves Song instance that was created
+  #not only parses filename correctly, as in Song.new_from_filename, but also saves Song instance that was created:
   def self.create_from_filename(filename)
     components = filename.split(" - ")
     song = self.new
@@ -75,5 +75,8 @@ class Song
     @@all << song
     song
   end
+  
+  #Song.destroy_all class method resets the state of the @@all class variable
+  
   
 end
