@@ -68,4 +68,5 @@ class Song
   #Song.create_from_filename accepts a filename in format of '-.mp3'
   #not only parses filename correctly, as in Song.new_from_filename, but also saves Song instance that was created
   
+  
 end
