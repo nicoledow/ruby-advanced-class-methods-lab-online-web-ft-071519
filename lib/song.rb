@@ -60,6 +60,7 @@ class Song
   def self.new_from_filename(filename)
     components = filename.split(" - ")
     song = self.new
+    song.name = components[0]
     
   end
   
