@@ -61,7 +61,7 @@ class Song
     components = filename.split(" - ")
     song = self.new
     song.name = components[0]
-    
+    song.artist_name = components[1].chomp(".mp3")
   end
   
 end
