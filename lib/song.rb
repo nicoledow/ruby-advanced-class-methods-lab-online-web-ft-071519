@@ -58,7 +58,9 @@ class Song
   #Song.new_from_filename accepts filename in format of '-.mp3'
   #this constructor parses the data from the filename, returns new instance of a Song:
   def self.new_from_filename(filename)
-    components = filename.split(/[-(.mp3)]/)
+    components = filename.split(" - ")
+    song = self.new
+    
   end
   
 end
