@@ -76,7 +76,10 @@ class Song
     song
   end
   
-  #Song.destroy_all class method resets the state of the @@all class variable
+  #Song.destroy_all class method resets the state of the @@all class variable, thereby deleting all song instances
+  def self.destroy_all
+    @@all.
+  end
   
   
 end
