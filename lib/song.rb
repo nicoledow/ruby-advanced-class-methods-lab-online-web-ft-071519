@@ -68,7 +68,12 @@ class Song
   #Song.create_from_filename accepts a filename in format of '-.mp3'
   #not only parses filename correctly, as in Song.new_from_filename, but also saves Song instance that was created
   def self.create_from_filename(filename)
-    
+    components = filename.split(" - ")
+    song = self.new
+    song.artist_name = components[0]
+    song.name = components[1].chomp(".mp3")
+    @@all << song
+    song
   end
   
 end
